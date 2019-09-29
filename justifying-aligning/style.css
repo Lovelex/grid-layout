@@ -1,0 +1,53 @@
+body {
+  color: #fff;
+  font-family: 'Nunito';
+  text-align: center;
+}
+
+#content {
+  display: grid;  
+  gap: 10px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+#content div {
+  background-color: #3bbced;
+  padding: 30px;
+}
+
+#content div:nth-child(even) {
+  background-color: #777;
+}
+
+#content {
+  grid-auto-rows: minmax(150px, auto);
+  grid-template-columns: repeat(3, 1fr);
+  /* align-items: start; */
+  /* justify-items: end; */
+}
+
+.one {
+  justify-self: end;
+  align-self: end;
+}
+
+.three {
+  justify-self: start;
+  align-self: flex-start
+}
+
+.two, .five {
+  justify-self: center;
+  align-self: center;
+}
+
+.four {
+  justify-self: end;
+  align-self: start;
+}
+
+.six {
+  justify-self: start;
+  align-self: end;
+}

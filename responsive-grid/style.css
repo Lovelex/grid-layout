@@ -1,0 +1,63 @@
+body {
+  color: #fff;
+  font-family: 'Nunito';
+  text-align: center;
+}
+
+#content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  gap: 5px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+#content {
+  grid-template-areas: 
+    "header header header header"
+    "footer footer footer footer"
+    "main main main main"
+    "main main main main"
+    "aside aside nav nav"
+    "section section section section"
+    "section section section section"
+}
+
+@media screen and (min-width: 760px) {
+
+  #content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    gap: 5px;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  
+  #content {
+    grid-template-areas: 
+      "header header header header"
+      "aside aside main main"
+      "nav nav main main"
+      "section section section section"
+      "section section section section"
+      "footer footer footer footer";
+  }
+  
+
+}
+
+#content >*{
+  background-color: #3bbced;
+  padding: 30px;
+  box-shadow: 0 2px 4px rgb(0, 0, 0, 0.4);
+  
+}
+
+header { grid-area: header; }
+main { grid-area: main; }
+section { grid-area: section; }
+aside { grid-area: aside; }
+nav { grid-area: nav; }
+footer { grid-area: footer; }

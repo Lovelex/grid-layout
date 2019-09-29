@@ -1,0 +1,36 @@
+body {
+  color: #fff;
+  font-family: 'Nunito';
+  text-align: center;
+}
+
+#content {
+  display: grid;  
+  gap: 3px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+#content {
+  column-gap: 3px;
+  /* Columns Setup */
+  grid-template-columns: 33.3% 33.3% 33.3%;
+  /* grid-template-columns: 30% 20% 50%; */
+  /* grid-template-columns: 1fr 2fr 1fr; */
+  /* grid-template-columns: repeat(9, 1fr);  */
+}
+
+#content {
+  row-gap: 3px;
+  /* Rows Setup */
+  grid-template-rows: repeat(3, minmax(200px, auto));
+}
+
+#content div {
+  background-color: #3bbced;
+  padding: 30px;
+}
+
+#content div:nth-child(even) {
+  background-color: #777;
+}
